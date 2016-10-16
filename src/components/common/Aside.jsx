@@ -5,8 +5,6 @@
 
 import React from 'react'
 
-var user2 = require('static/img/user2-160x160.jpg');
-
 class Menu extends React.Component {
   render() {
     return (
