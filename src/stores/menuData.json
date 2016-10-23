@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Dashboard",
+    "url": "#",
+    "icon": "icon icon-dashboard",
+    "children": [
+      {
+        "name": "Dashboard v1",
+        "url": "/dashboard/index"
+      },
+      {
+        "name": "Dashboard v2",
+        "url": "/dashboard/index2.html"
+      }
+    ]
+  }
+]

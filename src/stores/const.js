@@ -5,7 +5,7 @@
 
 const G = {
   host: 'localhost',
-  context: 'be-report'
+  context: 'react-admin'
 }
 
 export default G

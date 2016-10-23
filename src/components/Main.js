@@ -10,7 +10,9 @@ class AppComponent extends React.Component {
       <div className="wrapper">
         <Header/>
         <Menu/>
-        <Content/>
+        <Content>
+          {this.props.children}
+        </Content>
 
         <footer className="main-footer">
           <div className="pull-right hidden-xs">

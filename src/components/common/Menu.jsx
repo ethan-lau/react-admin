@@ -3,11 +3,24 @@
  * Date: 16/9/17
  */
 
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router'
 
 var user2 = require('static/img/user2-160x160.jpg');
 
 class Menu extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {menuData: []};
+    this.menuData = [];
+  }
+
+  componentDidMount() {
+    var menuData = require('stores/menuData.json');
+    console.log(menuData);
+    this.setState({menuData: menuData})
+  }
+
   render() {
     return (
       <aside className="main-sidebar">
@@ -17,7 +30,7 @@ class Menu extends React.Component {
               <img src={user2} className="img-circle" alt="User Image"/>
             </div>
             <div className="pull-left info">
-              <p>Alexander Pierce</p>
+              <p>Ethan Lau</p>
               <a href="#"><i className="fa fa-circle text-success"></i> Online</a>
             </div>
           </div>
@@ -32,18 +45,25 @@ class Menu extends React.Component {
           </form>
           <ul className="sidebar-menu">
             <li className="header">MAIN NAVIGATION</li>
-            <li className="treeview">
-              <a href="#">
-                <i className="fa fa-dashboard"></i> <span>Dashboard</span>
-                <span className="pull-right-container">
-              <i className="fa fa-angle-left pull-right"></i>
-            </span>
-              </a>
-              <ul className="treeview-menu">
-                <li><a href="../../index.html"><i className="fa fa-circle-o"></i> Dashboard v1</a></li>
-                <li><a href="../../index2.html"><i className="fa fa-circle-o"></i> Dashboard v2</a></li>
-              </ul>
-            </li>
+            {this.state.menuData.map(function (v, i) {
+              if (v.children && v.children.length > 0) {
+                return (
+                  <li key={i} className="treeview">
+                    <a href={v.url}>
+                      <i className={v.icon}></i><span>{v.name}</span>
+                      <span className="pull-right-container"><i className="fa fa-angle-left pull-right"></i></span>
+                    </a>
+                    <ul className="treeview-menu">
+                      {v.children.map(function(c, j) {
+                        return (
+                          <li key={j}><Link to={c.url}><i className="fa fa-circle-o"></i>{c.name}</Link></li>
+                        )
+                      })}
+                    </ul>
+                  </li>
+                );
+              }
+            })}
             <li className="treeview">
               <a href="#">
                 <i className="fa fa-files-o"></i>
@@ -202,5 +222,11 @@ class Menu extends React.Component {
     )
   }
 }
+
+Menu.propTypes = {
+  menuData: React.PropTypes.arrayOf(
+    React.PropTypes.object
+  )
+};
 
 export default Menu
