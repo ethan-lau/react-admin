@@ -2,7 +2,7 @@
   {
     "name": "Dashboard",
     "url": "#",
-    "icon": "icon icon-dashboard",
+    "icon": "fa fa-dashboard",
     "children": [
       {
         "name": "Dashboard v1",

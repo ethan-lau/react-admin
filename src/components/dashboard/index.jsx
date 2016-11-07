@@ -187,7 +187,7 @@ class Index extends React.Component {
                         <i className="fa fa-ellipsis-v"></i>
                         <i className="fa fa-ellipsis-v"></i>
                       </span>
-                      <input type="checkbox" value="" />
+                      <input type="checkbox" value="" readOnly/>
                         <span className="text">Design a nice theme</span>
                         <small className="label label-danger"><i className="fa fa-clock-o"></i> 2 mins</small>
                         <div className="tools">
@@ -200,7 +200,7 @@ class Index extends React.Component {
                         <i className="fa fa-ellipsis-v"></i>
                         <i className="fa fa-ellipsis-v"></i>
                       </span>
-                      <input type="checkbox" value="" />
+                      <input type="checkbox" value="" readOnly/>
                         <span className="text">Make the theme responsive</span>
                         <small className="label label-info"><i className="fa fa-clock-o"></i> 4 hours</small>
                         <div className="tools">
@@ -213,7 +213,7 @@ class Index extends React.Component {
                         <i className="fa fa-ellipsis-v"></i>
                         <i className="fa fa-ellipsis-v"></i>
                       </span>
-                      <input type="checkbox" value="" />
+                      <input type="checkbox" value="" readOnly/>
                         <span className="text">Let theme shine like a star</span>
                         <small className="label label-warning"><i className="fa fa-clock-o"></i> 1 day</small>
                         <div className="tools">
@@ -226,7 +226,7 @@ class Index extends React.Component {
                         <i className="fa fa-ellipsis-v"></i>
                         <i className="fa fa-ellipsis-v"></i>
                       </span>
-                      <input type="checkbox" value="" />
+                      <input type="checkbox" value="" readOnly/>
                         <span className="text">Let theme shine like a star</span>
                         <small className="label label-success"><i className="fa fa-clock-o"></i> 3 days</small>
                         <div className="tools">
@@ -239,7 +239,7 @@ class Index extends React.Component {
                         <i className="fa fa-ellipsis-v"></i>
                         <i className="fa fa-ellipsis-v"></i>
                       </span>
-                      <input type="checkbox" value="" />
+                      <input type="checkbox" value="" readOnly/>
                         <span className="text">Check your messages and notifications</span>
                         <small className="label label-primary"><i className="fa fa-clock-o"></i> 1 week</small>
                         <div className="tools">
@@ -252,7 +252,7 @@ class Index extends React.Component {
                         <i className="fa fa-ellipsis-v"></i>
                         <i className="fa fa-ellipsis-v"></i>
                       </span>
-                      <input type="checkbox" value="" />
+                      <input type="checkbox" value="" readOnly/>
                         <span className="text">Let theme shine like a star</span>
                         <small className="label label-default"><i className="fa fa-clock-o"></i> 1 month</small>
                         <div className="tools">
@@ -353,17 +353,17 @@ class Index extends React.Component {
                 <div className="box-footer no-border">
                   <div className="row">
                     <div className="col-xs-4 text-center" style={{borderRight: '1px solid #f4f4f4'}}>
-                      <input type="text" className="knob" data-readonly="true" value="20" data-width="60" data-height="60" data-fgColor="#39CCCC"/>
+                      <input type="text" className="knob" data-readonly="true" defaultValue="20" data-width="60" data-height="60" data-fgColor="#39CCCC"/>
 
                         <div className="knob-label">Mail-Orders</div>
                     </div>
                     <div className="col-xs-4 text-center" style={{borderRight: '1px solid #f4f4f4'}}>
-                      <input type="text" className="knob" data-readonly="true" value="50" data-width="60" data-height="60" data-fgColor="#39CCCC"/>
+                      <input type="text" className="knob" data-readonly="true" defaultValue="50" data-width="60" data-height="60" data-fgColor="#39CCCC"/>
 
                         <div className="knob-label">Online</div>
                     </div>
                     <div className="col-xs-4 text-center">
-                      <input type="text" className="knob" data-readonly="true" value="30" data-width="60" data-height="60" data-fgColor="#39CCCC"/>
+                      <input type="text" className="knob" data-readonly="true" defaultValue="30" data-width="60" data-height="60" data-fgColor="#39CCCC"/>
 
                         <div className="knob-label">In-Store</div>
                     </div>

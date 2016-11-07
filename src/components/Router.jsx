@@ -13,7 +13,7 @@ export default () => (
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Home}/>
-      <Route path="dashboard">
+      <Route path="dashboard" components={Home}>
         <Route path="index" component={Index}/>
       </Route>
       <Route path="*" component={Error404} />

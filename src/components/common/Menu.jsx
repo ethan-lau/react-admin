@@ -17,7 +17,6 @@ class Menu extends React.Component {
 
   componentDidMount() {
     var menuData = require('stores/menuData.json');
-    console.log(menuData);
     this.setState({menuData: menuData})
   }
 
